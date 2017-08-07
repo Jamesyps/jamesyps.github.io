@@ -32,7 +32,7 @@ art galleries or enjoying a relaxing break in the garden.
 
 Photography is my second love after developing. My D-SLR has been by my side on trips to
 the top of Ben Nevis, the cold beauty of Finland and Estonia and the greenery of the
-british countryside. You can nd many of my shots on [Instagram](#) and [Flickr](#).
+british countryside. You can nd many of my shots on [Instagram](https://instagram.com/jamesyps) and [Flickr](https://www.flickr.com/people/jameswigger/).
 
 When inside, I am either watching movies, playing with digital design or making a
 delicious mess in the kitchen.
