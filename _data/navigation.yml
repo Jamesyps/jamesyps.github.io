@@ -1,0 +1,16 @@
+header:
+  - label: Projects
+    href: '/#projects'
+  - label: Experience
+    href: '/#skills'
+  - label: Interests
+    href: '/#bio'
+  - label: Blog
+    href: '/#posts'
+
+footer:
+  - label: LinkedIn
+    href: https://www.linkedin.com/in/james-wigger-9a875923/
+    tab: true
+  #- label: Curriculum Vitae
+  #  href: /assets/resources/cv.pdf

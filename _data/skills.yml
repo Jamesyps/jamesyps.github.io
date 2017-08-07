@@ -1,0 +1,31 @@
+- title: PHP
+  content: From simple scripts to full-blown Laravel applications, I am ready to go with the trusty workhorse that is PHP. With experience of phpunit, composer and the modern way of building PHP applications your projects are in safe hands with me.
+  icon: php
+
+- title: HTML &amp; CSS
+  content: Clean, semantic markup and a little bit of flair with the best that CSS3 can offer will make your projects stand out from the crowd. Under the hood pattern libraries, components and well-managed stylesheets ensure code stays neat and tidy.
+  icon: html
+
+- title: Javascript
+  content: I know my way around a const and an arrow function - that's a promise! With experience of ES6 and front-end view layers such as Vue and React, including their data-store partners Vuex and Redux. But not to worry, I'm not above a little jQuery here and there...
+  icon: javascript
+
+- title: Sass
+  content: Sprinkling some magic into standard CSS, I have worked with Sass nearly as long as PHP - with experience of maintaining and building my own libraries (including full test-suites).
+  icon: sass
+
+- title: Version Control
+  content: I have been committed to using version control for as long as I have been developing websites. I am comfortable using the command line and online services such as Github to manage code repositories.
+  icon: vcs
+
+- title: Build Pipelines
+  content: From Grunt tasks to Webpack bundles I am confident in working with, extending or creating a build pipeline for static assets.
+  icon: build
+
+- title: Documentation
+  content: Confession time - I love writing documentation almost as much as reading it. I have previously documented internal tools and setup procedures as well as assisting in training new colleagues.
+  icon: help
+
+- title: Leadership
+  content: I am comfortable taking the initiative and taking on new challenges. In my past roles I have lead the transition to a formal build process, worked with management to implement new technologies and created an array of tools to help both the business and client experiences alike.
+  icon: idea

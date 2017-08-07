@@ -1,0 +1,35 @@
+.o-treble {
+    display: flex;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin: 0 -15px -30px; // reset internal spacing
+    padding: 0;
+
+    list-style: none;
+}
+
+.o-treble__item {
+    display: block;
+
+    padding: 0 15px 30px;
+    width: 33.33%;
+}
+
+@include set-breakpoint-until('lg') {
+    .o-treble__item {
+        width: 50%;
+    }
+}
+
+@include set-breakpoint-until('xs') {
+    .o-treble {
+        margin: 0;
+    }
+
+    .o-treble__item {
+        padding: 0 0 30px;
+        width: 100%;
+    }
+}

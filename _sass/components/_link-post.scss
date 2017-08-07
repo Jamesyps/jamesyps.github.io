@@ -1,0 +1,58 @@
+.c-link-post {
+    display: block;
+
+    background: get-tint('coal', 98%) url('../images/link-arrow.svg') no-repeat calc(100% - 25px) 50%;
+    background-size: 22px 22px;
+
+    padding: 25px 80px 25px 25px;
+    text-decoration: none;
+}
+
+.c-link-post__title,
+.c-link-post__meta {
+    display: block;
+}
+
+.c-link-post__title {
+    @include set-font('serif');
+    @include set-font-size(22);
+    @include set-font-leading(22);
+
+    margin-bottom: 4px;
+
+    color: get-colour('coal');
+    font-weight: 400;
+    font-style: italic;
+}
+
+.c-link-post__meta {
+    @include set-font-size(16);
+    @include set-font-leading(16);
+
+    color: get-tint('coal', 50%);
+}
+
+.c-link-post--highlight-coal {
+    border-left: 2px solid get-colour('coal');
+    background-color: #FFF;
+}
+
+.c-link-post--highlight-neon {
+    border-left: 2px solid get-colour('neon');
+    background-color: #FFF;
+}
+
+.c-link-post--highlight-emerald {
+    border-left: 2px solid get-colour('emerald');
+    background-color: #FFF;
+}
+
+.c-link-post--highlight-candy {
+    border-left: 2px solid get-colour('candy');
+    background-color: #FFF;
+}
+
+.c-link-post--highlight-amber {
+    border-left: 2px solid get-colour('amber');
+    background-color: #FFF;
+}

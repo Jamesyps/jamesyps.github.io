@@ -1,0 +1,149 @@
+.is-raw {
+    p {
+        margin-bottom: 30px;
+    }
+
+    p code {
+        @include set-font-size(16);
+
+        border: 1px solid get-tint('coal', 95%);
+        border-radius: 3px;
+        background-color: get-tint('coal', 98%);
+        padding: 3px 6px 3px 7px;
+        letter-spacing: 1px;
+    }
+
+    a {
+        text-decoration: none;
+        color: get-colour('neon');
+
+        &:hover {
+            text-decoration: underline;
+            color: get-colour('emerald');
+        }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @include set-font('serif');
+
+        position: relative;
+        margin-bottom: 30px;
+        padding-bottom: 10px;
+
+        color: get-colour('coal');
+        font-weight: 400;
+        font-style: italic;
+
+        &:after {
+            display: block;
+
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            border-radius: 1px;
+            background-color: get-tint('coal', 50%);
+
+            width: 50px;
+            height: 2px;
+
+            content: '';
+        }
+    }
+
+    h1 {
+        @include set-font-size(36);
+        @include set-font-leading(36);
+    }
+
+    h2 {
+        @include set-font-size(32);
+        @include set-font-leading(32);
+    }
+
+    h3 {
+        @include set-font-size(28);
+        @include set-font-leading(28);
+    }
+
+    h4 {
+        @include set-font-size(24);
+        @include set-font-leading(24);
+    }
+
+    h5 {
+        @include set-font-size(22);
+        @include set-font-leading(22);
+    }
+
+    h6 {
+        @include set-font-size(20);
+        @include set-font-leading(20);
+    }
+
+    blockquote {
+        @include set-font('serif');
+        @include set-font-size(22);
+        @include set-font-leading(34);
+
+        position: relative;
+        margin-bottom: 30px;
+        padding: 30px 0;
+
+        text-align: center;
+        font-weight: 400;
+        font-style: italic;
+
+        > *:last-child {
+            margin-bottom: 0;
+        }
+
+        &:before,
+        &:after {
+            display: block;
+
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+
+            margin-left: -50px;
+
+            border-radius: 1px;
+            background-color: get-colour('neon');
+
+            width: 100px;
+            height: 2px;
+
+            content: '';
+        }
+
+        &:before {
+            top: 0;
+        }
+
+        &:after {
+            bottom: 0;
+        }
+    }
+
+    img {
+        display: block;
+        margin-bottom: 30px;
+        box-shadow: $card-shadow-sm;
+        border: 1px solid get-tint('coal', 95%);
+        border-radius: 3px;
+        padding: 5px;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .highlight {
+        margin-bottom: 30px;
+        box-shadow: inset $card-shadow;
+    }
+}

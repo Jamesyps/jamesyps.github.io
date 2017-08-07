@@ -1,0 +1,53 @@
+{% include header.html %}
+
+    <!-- Banner -->
+    <div class="c-fog {% if page.banner.image %} c-fog--has-image {% endif %}" {% if page.banner.image %} style="background-image: url({{ page.banner.image }});" {% endif %}>
+        <div class="c-fog__bank">
+        <div class="o-container">
+
+                <div class="o-single">
+
+                    <article class="o-content u-align-center">
+                        <div class="o-content__header">
+
+                            <header class="c-header c-header--center c-header--lg">
+                                <h1 class="c-header__title">
+                                    {{ page.title }}
+                                </h1>
+                            </header>
+
+                        </div>
+                        <div class="o-content__main">
+
+                            <p class="c-lead">
+                                {{ page.intro }}
+                            </p>
+
+                        </div>
+                        <footer class="o-content__actions">
+                            <a href="#main" class="c-link-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                    <path d="M19.895,4.737l2.842,2.896l-11.369,11.314l-11.368,-11.314l2.842,-2.896l8.526,8.526l8.527,-8.526Z"/>
+                                </svg>
+                            </a>
+                        </footer>
+                    </article>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ./Banner -->
+
+    <!-- Content -->
+    <article id="main">
+        {{ content }}
+    </article>
+    <!-- ./Content -->
+
+    <!-- Action Bar -->
+    {% include project/action-bar.html %}
+    <!-- ./Action Bar -->
+
+{% include footer.html %}

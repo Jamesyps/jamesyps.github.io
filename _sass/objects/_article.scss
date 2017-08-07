@@ -1,0 +1,9 @@
+.o-article {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 680px;
+
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}

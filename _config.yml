@@ -1,0 +1,46 @@
+# GitHub Pages
+github: [metadata]
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+gems:
+  - jekyll-coffeescript
+  - jekyll-paginate
+  - jekyll-sitemap
+
+# Pretty things
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Global
+meta:
+  author: James Wigger
+  app_name: James Wigger
+  accent: 138DF0
+  contact: james.s.wigger@gmail.com
+
+accounts:
+  analytics: UA-2001719-4
+  twitter: jamesyps
+  instagram: jamesyps
+  github: jamesyps
+
+paths:
+  base: https://jameswigger.co.uk
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:title
+
+# Posts
+permalink: /blog/:title.html
+
+# Unwanted files
+exclude:
+  - Gemfile
+  - Gemfile.lock

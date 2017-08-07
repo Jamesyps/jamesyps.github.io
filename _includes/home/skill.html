@@ -1,0 +1,17 @@
+<div class="o-content o-content--sm">
+    <div class="o-content__header">
+        <header class="c-header c-header--sm">
+            {% if skill.icon %}
+                <img src="/assets/images/skills/{{ skill.icon }}.svg" alt="{{ skill.icon | capitalize}}" class="c-header__icon" />
+            {% endif %}
+            <h3 class="c-header__title">
+                {{ skill.title }}
+            </h3>
+        </header>
+    </div>
+    <div class="o-content__main u-small">
+        <p>
+            {{ skill.content }}
+        </p>
+    </div>
+</div>

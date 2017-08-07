@@ -1,0 +1,7 @@
+# Resource files
+.sass-cache
+.DS_Store
+.idea
+
+# This is generated on push
+_site

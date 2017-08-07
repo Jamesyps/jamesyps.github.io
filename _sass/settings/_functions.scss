@@ -1,0 +1,65 @@
+//
+// Colours
+//
+@function get-colour($key) {
+    @if not map-has-key($core-colours, $key) {
+        @error 'No colour exists with the key: #{$key}';
+    }
+
+    @return map-get($core-colours, $key);
+}
+
+@function get-tint-raw($colour, $percentage: 25) {
+    @return mix(#FFF, $colour, $percentage);
+}
+
+@function get-tint($key: 'default', $percentage: 25) {
+    @return get-tint-raw(get-colour($key), $percentage);
+}
+
+@function get-shade-raw($colour, $percentage: 25) {
+    @return mix(#000, $colour, $percentage);
+}
+
+@function get-shade($key, $percentage: 25) {
+    @return get-shade-raw(get-colour($key), $percentage);
+}
+
+//
+// Fonts
+//
+@function get-font($key: 'body') {
+    @if not map-has-key($core-fonts, $key) {
+        @error 'No font stack exists with the key: #{$key}';
+    }
+
+    @return map-get($core-fonts, $key);
+}
+
+//
+// Layout
+//
+@function get-spacing($key: 'md') {
+    @if not map-has-key($core-spacing, $key) {
+        @error 'No spacing exists with the key: #{$key}';
+    }
+
+    @return map-get($core-spacing, $key);
+}
+
+//
+// Breakpoints
+//
+@function get-breakpoint($key) {
+    @if not map-has-key($core-breakpoints, $key) {
+        @error 'No breakpoint exists with the key: #{$key}';
+    }
+    @return map-get($core-breakpoints, $key);
+}
+
+//
+// Utilities
+//
+@function get-rem($value) {
+    @return ($value / 16) * 1rem;
+}

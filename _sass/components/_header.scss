@@ -1,0 +1,85 @@
+.c-header {
+    position: relative;
+    padding-bottom: 10px;
+
+    &:after {
+        display: block;
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        border-radius: 1px;
+        background-color: get-colour('neon');
+
+        width: 100px;
+        height: 2px;
+
+        content: '';
+    }
+}
+
+.c-header__icon {
+    display: block;
+
+    margin-bottom: 20px;
+
+    width: 32px;
+    height: 32px;
+}
+
+.c-header__title {
+    @include set-font('serif');
+    @include set-font-size(36);
+    @include set-font-leading(44);
+
+    color: get-colour('coal');
+    font-weight: 400;
+    font-style: italic;
+}
+
+.c-header--center {
+    text-align: center;
+
+    &:after {
+        left: 50%;
+        margin-left: -50px;
+    }
+}
+
+.c-header--lg {
+    .c-header__title {
+        @include set-font-size(64);
+        @include set-font-leading(64);
+    }
+}
+
+.c-header--sm {
+    .c-header__title {
+        @include set-font-size(24);
+        @include set-font-leading(24);
+    }
+
+    &:after {
+        background-color: get-tint('coal', 50%);
+        width: 50px;
+    }
+}
+
+@include set-breakpoint-until('md') {
+    .c-header--lg {
+        .c-header__title {
+            @include set-font-size(54);
+            @include set-font-leading(54);
+        }
+    }
+}
+
+@include set-breakpoint-until('xs') {
+    .c-header--lg {
+        .c-header__title {
+            @include set-font-size(44);
+            @include set-font-leading(44);
+        }
+    }
+}

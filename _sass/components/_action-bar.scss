@@ -1,0 +1,23 @@
+.c-action-bar {
+    background: linear-gradient(to bottom, get-tint('neon', 35%) 0%, get-colour('neon') 100%);
+    padding: 25px 0;
+
+    > .o-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.c-action-bar__slot {
+    flex: 1;
+    text-align: center;
+}
+
+.c-action-bar__slot--first {
+    text-align: left;
+}
+
+.c-action-bar__slot--last {
+    text-align: right;
+}

@@ -1,0 +1,153 @@
+{% include header.html %}
+
+    <!-- Banner -->
+    <div class="c-fog {% if page.banner.image %} c-fog--has-image {% endif %}" {% if page.banner.image %} style="background-image: url({{ page.banner.image }});" {% endif %}>
+        <div class="c-fog__bank">
+            <div class="o-container">
+
+                <div class="o-single">
+
+                    <article class="o-content u-align-center">
+                        <div class="o-content__header">
+
+                            <header class="c-header c-header--center c-header--lg">
+                                <h1 class="c-header__title">
+                                    {{ page.banner.title }}
+                                </h1>
+                            </header>
+
+                        </div>
+                        <div class="o-content__main">
+
+                            <p class="c-lead">
+                                {{ page.banner.content }}
+                            </p>
+
+                        </div>
+                        <footer class="o-content__actions">
+
+                            {% include home/social.html %}
+
+                        </footer>
+                    </article>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- ./Banner -->
+
+    <!-- Projects -->
+    <div id="projects" class="c-section">
+        <div class="o-container">
+
+            <header class="c-header u-m-btm">
+                <h2 class="c-header__title">
+                    Some of my work...
+                </h2>
+            </header>
+
+            <ul class="o-treble">
+                {% for project in site.projects %}
+                <li class="o-treble__item" data-scroll>
+
+                    {% include home/project.html %}
+
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+    <!-- ./Projects -->
+
+    <!-- Skills -->
+    <div id="skills" class="c-section c-section--alt">
+        <div class="o-container">
+
+            <header class="c-header u-m-btm">
+                <h2 class="c-header__title">
+                    What I know...
+                </h2>
+            </header>
+
+            <ul class="o-quadruple">
+                {% for skill in site.data.skills %}
+                <li class="o-quadruple__item">
+
+                    {% include home/skill.html %}
+
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+    <!-- ./Skills -->
+
+    <!-- Bio -->
+    <div id="bio" class="c-section">
+        <div class="o-container">
+
+            <div class="o-split">
+                <div class="o-split__main">
+
+                    <article class="o-content">
+                        <div class="o-content__header">
+                            <header class="c-header">
+                                <h1 class="c-header__title">
+                                    {{ page.title }}
+                                </h1>
+                            </header>
+                        </div>
+                        <div class="o-content__main is-raw">
+                            {{ content }}
+                        </div>
+                    </article>
+
+                </div>
+                <div class="o-split__aside">
+
+                    {% if page.photos %}
+                    <aside class="c-photo-stack" data-scroll>
+                        {% for photo in page.photos %}
+                        <figure class="c-photo-stack__item">
+                            <img class="c-photo-stack__src" src="{{ photo.src }}" alt="{{ photo.alt }}" />
+                        </figure>
+                        {% endfor %}
+                    </aside>
+                    {% endif %}
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- ./Bio -->
+
+    <!-- Blog -->
+    <div id="posts" class="c-section c-section--alt">
+        <div class="o-container">
+
+            <header class="c-header u-m-btm">
+                <h2 class="c-header__title">
+                    Some thoughts...
+                </h2>
+            </header>
+
+            <ul class="o-double">
+                {% for post in site.posts %}
+                <li class="o-double__item">
+
+                    {% include home/post.html %}
+
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+    <!-- ./Blog -->
+
+{% include footer.html %}

@@ -1,0 +1,33 @@
+.c-link-pager {
+    @include set-font-size(16);
+    @include set-font-leading(16);
+
+    display: inline-block;
+    background: no-repeat 0 50%;
+    background-size: 20px 20px;
+    padding: 12px 0;
+
+    text-decoration: none;
+    color: #FFF;
+
+    &:hover {
+        color: get-colour('amber');
+    }
+}
+
+.c-link-pager--back {
+    background-image: url('../images/link-back.svg');
+    padding-left: 30px;
+}
+
+.c-link-pager--next {
+    background-image: url('../images/link-next.svg');
+    background-position: 100% 50%;
+    padding-right: 30px;
+}
+
+@include set-breakpoint-until('sm') {
+    .c-link-pager__label {
+        display: none;
+    }
+}

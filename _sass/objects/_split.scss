@@ -1,0 +1,34 @@
+.o-split {
+    display: flex;
+    flex-direction: row;
+}
+
+.o-split__main,
+.o-split__aside {
+    width: 50%;
+}
+
+.o-split__aside {
+    padding-left: 40px;
+    text-align: right;
+}
+
+@include set-breakpoint-until('md') {
+    .o-split {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .o-split__main,
+    .o-split__aside {
+        max-width: 680px;
+        width: 100%;
+    }
+
+    .o-split__aside {
+        padding-top: 40px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+}

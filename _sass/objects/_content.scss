@@ -1,0 +1,27 @@
+.o-content {
+
+}
+
+.o-content__header {
+    margin-bottom: 20px;
+}
+
+.o-content__main {
+    > *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.o-content__actions {
+    padding-top: 30px;
+}
+
+.o-content--sm {
+    .o-content__header {
+        margin-bottom: 10px;
+    }
+
+    .o-content__actions {
+        padding-top: 15px;
+    }
+}

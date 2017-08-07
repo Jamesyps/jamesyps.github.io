@@ -1,0 +1,28 @@
+.c-btn {
+    @include set-font-size(15);
+    @include set-font-leading(15);
+
+    display: inline-block;
+
+    border-radius: 4px;
+    background: linear-gradient(to bottom, get-tint('neon', 35%) 0%, get-colour('neon') 100%);
+
+    padding: 12px 22px;
+
+    white-space: nowrap;
+    text-decoration: none;
+    color: #FFF;
+
+    &:hover {
+        background: linear-gradient(to bottom, get-tint('emerald', 35%) 0%, get-colour('emerald') 100%);
+    }
+}
+
+.c-btn--wireframe {
+    border: 2px solid #FFF;
+    background: transparent;
+
+    &:hover {
+        background: rgba(#FFF, 0.15);
+    }
+}

@@ -1,0 +1,18 @@
+.c-lead {
+    @include set-font-size(22);
+    @include set-font-leading(36);
+}
+
+@include set-breakpoint-until('md') {
+    .c-lead {
+        @include set-font-size(20);
+        @include set-font-leading(34);
+    }
+}
+
+@include set-breakpoint-until('xs') {
+    .c-lead {
+        @include set-font-size(18);
+        @include set-font-leading(32);
+    }
+}

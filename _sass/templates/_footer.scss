@@ -1,0 +1,48 @@
+.t-site-footer {
+    border-top: 2px solid get-tint('coal', 90%);
+    background-color: #FFF;
+    padding: 30px 0;
+
+    > .o-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+.t-site-footer__copyright {
+    @include set-font-size(16);
+    @include set-font-leading(16);
+
+    color: get-tint('coal', 50%);
+}
+
+.t-site-footer__social {
+    flex: 1;
+    text-align: center;
+}
+
+.t-site-footer__menu {
+
+}
+
+@include set-breakpoint-until('sm') {
+    .t-site-footer {
+        > .o-container {
+            flex-direction: column;
+        }
+    }
+
+    .t-site-footer__menu {
+        margin-bottom: 20px;
+    }
+
+    .t-site-footer__social {
+        margin-bottom: 20px;
+    }
+
+    .t-site-footer__copyright {
+        @include set-font-size(12);
+        @include set-font-leading(12);
+    }
+}

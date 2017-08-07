@@ -1,0 +1,22 @@
+.c-fog {
+    background: no-repeat 50%;
+    background-size: cover;
+}
+
+.c-fog__bank {
+    background: linear-gradient(to bottom, #FFF 0%, get-tint('coal', 95%) 100%);
+    padding: 140px 0;
+}
+
+.c-fog--has-image {
+    .c-fog__bank {
+        background: linear-gradient(to bottom, rgba(#FFF, 0.95) 0%, rgba(get-tint('coal', 95%), 0.95) 100%);
+
+        @supports (backdrop-filter:blur()) or (-webkit-backdrop-filter:blur()){
+            background: linear-gradient(to bottom, rgba(#FFF, 0.65) 0%, rgba(get-tint('coal', 95%), 0.98) 100%);
+
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+    }
+}

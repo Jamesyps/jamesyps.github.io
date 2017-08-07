@@ -1,0 +1,133 @@
+//
+// Fonts
+//
+@mixin set-font($key) {
+    font-family: get-font($key);
+}
+
+@mixin set-font-size($value) {
+    font-size: get-rem($value);
+}
+
+@mixin set-font-leading($value) {
+    line-height: get-rem($value);
+}
+
+//
+// Layout
+//
+@mixin set-container($limit: true) {
+    margin-right: auto;
+    margin-left: auto;
+
+    width: $core-width-fluid;
+
+    @if ($limit) {
+        max-width: $core-width-limit;
+    }
+}
+
+@mixin set-margin($direction: 'a', $key: 'md') {
+    @if ($direction == 'a') {
+        margin: get-spacing($key);
+    }
+
+    @if ($direction == 't' OR $direction == 'y') {
+        margin-top: get-spacing($key);
+    }
+
+    @if ($direction == 'r' OR $direction == 'x') {
+        margin-right: get-spacing($key);
+    }
+
+    @if ($direction == 'b' OR $direction == 'y') {
+        margin-bottom: get-spacing($key);
+    }
+
+    @if ($direction == 'l' OR $direction == 'x') {
+        margin-left: get-spacing($key);
+    }
+}
+
+@mixin set-padding($direction: 'a', $key: 'md') {
+    @if ($direction == 'a') {
+        padding: get-spacing($key);
+    }
+
+    @if ($direction == 't' OR $direction == 'y') {
+        padding-top: get-spacing($key);
+    }
+
+    @if ($direction == 'r' OR $direction == 'x') {
+        padding-right: get-spacing($key);
+    }
+
+    @if ($direction == 'b' OR $direction == 'y') {
+        padding-bottom: get-spacing($key);
+    }
+
+    @if ($direction == 'l' OR $direction == 'x') {
+        padding-left: get-spacing($key);
+    }
+}
+
+@mixin rdx-reset-spacing($outer: true, $inner: true) {
+    @if ($outer == true) {
+        margin: 0;
+    }
+
+    @if ($inner == true) {
+        padding: 0;
+    }
+}
+
+//
+// Breakpoints
+//
+@mixin set-breakpoint-from($key) {
+    @media screen and (min-width: get-breakpoint($key)) {
+        @content;
+    }
+}
+
+@mixin set-breakpoint-until($key) {
+    @media screen and (max-width: get-breakpoint($key) - 0.01) {
+        @content;
+    }
+}
+
+@mixin set-breakpoint-between($min, $max) {
+    @media screen and (min-width: get-breakpoint($min)) and (max-width: get-breakpoint($max)) {
+        @content;
+    }
+}
+
+@mixin set-breakpoint-xl() {
+    @include breakpoint-from('xl') {
+        @content;
+    }
+}
+
+@mixin set-breakpoint-lg() {
+    @include breakpoint-from('lg') {
+        @content;
+    }
+}
+
+@mixin set-breakpoint-md() {
+    @include breakpoint-from('md') {
+        @content;
+    }
+}
+
+@mixin set-breakpoint-sm() {
+    @include breakpoint-from('sm') {
+        @content;
+    }
+}
+
+@mixin set-breakpoint-xs() {
+    @include breakpoint-from('xs') {
+        @content;
+    }
+}

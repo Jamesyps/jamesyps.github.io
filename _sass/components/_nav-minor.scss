@@ -1,0 +1,22 @@
+.c-nav-minor {
+
+}
+
+.c-nav-minor__link {
+    @include set-font-size(15);
+    @include set-font-leading(15);
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+    text-decoration: none;
+    color: get-tint('coal', 50%);
+
+    &:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    &:hover {
+        color: get-colour('neon');
+    }
+}

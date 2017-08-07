@@ -1,0 +1,112 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+        <!-- General -->
+        <title>{% if page.meta.title %} {{ page.meta.title }} {% else %} {{ page.title }} {% endif %}</title>
+        <meta name="description" content="{{ page.meta.description }}">
+        <meta name="author" content="{{ site.meta.author }}">
+        <!-- ./General -->
+
+        <!-- Schema.org -->
+        <meta itemprop="name" content="{% if page.meta.title %} {{ page.meta.title }} {% else %} {{ page.title }} {% endif %}">
+        <meta itemprop="description" content="{{ page.meta.description }}">
+        <meta itemprop="image" content="{{ site.paths.base }}/assets/images/meta/schema-thumb.png">
+        <!-- ./Schema.org -->
+
+        <!-- Open Graph -->
+        <meta property="og:type" content="website">
+        <meta property="og:site_name" content="{{ site.meta.app_name }}">
+        <meta property="og:title" content="{% if page.meta.title %} {{ page.meta.title }} {% else %} {{ page.title }} {% endif %}">
+        <meta property="og:description" content="{{ page.meta.description }}">
+        <meta property="og:url" content="{{ site.paths.base }}{{ page.url }}">
+        <meta property="og:image" content="{{ site.paths.base }}/asset/images/meta/facebook-thumb.png">
+        <!-- ./Open Graph -->
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="{{ site.meta.app_name }}">
+        <meta name="twitter:title" content="{% if page.meta.title %} {{ page.meta.title }} {% else %} {{ page.title }} {% endif %}">
+        <meta name="twitter:description" content="{{ page.meta.description }}">
+        <meta name="twitter:url" content="{{ site.paths.base }}{{ page.url }}">
+        <meta name="twitter:image" content="{{ site.paths.base}}/assets/images/meta/twitter-thumb.png">
+        <!-- ./Twitter -->
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="/assets/css/global.css?v={{ site.time | date: '%s%N' }}">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i|Vollkorn:400i" rel="stylesheet">
+        <link rel="stylesheet" href="/assets/css/syntax.css?v={{ site.time | date: '%s%N' }}">
+        <!-- ./Styles -->
+
+        <!-- Device Customisation -->
+        <meta name="application-name" content="{{ site.meta.app_name }}">
+        <meta name="theme-color" content="#{{ site.meta.accent }}">
+        <link rel="apple-touch-icon-precomposed" href="{{ site.paths.base}}/assets/images/meta/device-icon.png">
+        <link rel="icon" type="image/png" href="{{ site.paths.base}}/assets/images/meta/favicon.png">
+        <link rel="icon" sizes="180x180" href="{{ site.paths.base}}/assets/images/meta/device-icon.png">
+        <!-- ./Device Customisation -->
+
+        {% if site.accounts.analytics %}
+        <!-- Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '{{ site.accounts.analytics }}', 'auto');
+            ga('send', 'pageview');
+        </script>
+        <!-- ./Analytics -->
+        {% endif %}
+
+        <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <!-- Site Header -->
+        <header class="t-site-header">
+            <div class="o-container">
+
+                <div class="t-site-header__brand">
+
+                    <a href="/" class="c-avatar">
+                        <img src="https://www.gravatar.com/avatar/73c672a28b8ed89f37a74e4e50809860" alt="James Wigger" class="c-avatar__src" />
+                    </a>
+
+                </div>
+
+                <div class="t-site-header__pages">
+
+                    <a href="javascript:void()" class="t-site-header__pages-toggle" onclick="this.classList.toggle('t-site-header__pages-toggle--is-active');">Menu</a>
+
+                    <div class="t-site-header__pages-collapse">
+                        <nav class="c-nav-main">
+                            {% for link in site.data.navigation.header %}
+                            <a href="{{ link.href }}" class="c-nav-main__page" {% if link.tab %} target="_blank" {% endif %}>
+                                {{ link.label }}
+                            </a>
+                            {% endfor %}
+                        </nav>
+                    </div>
+
+                </div>
+
+                <div class="t-site-header__vip">
+
+                    <a href="mailto: {{ site.meta.contact }}" class="c-btn c-btn--flair">
+                        Get in touch
+                    </a>
+
+                </div>
+
+            </div>
+        </header>
+        <!-- ./Site Header -->

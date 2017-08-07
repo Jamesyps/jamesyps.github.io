@@ -1,0 +1,27 @@
+.c-photo-stack {
+
+}
+
+.c-photo-stack__item {
+    display: block;
+    margin: 0;
+
+    &:nth-child(odd) {
+        position: relative;
+        z-index: 2;
+        transform: rotate(-6deg);
+
+        margin-bottom: -150px;
+    }
+
+    &:nth-child(even) {
+        transform: rotate(3deg);
+        margin-left: 50px;
+    }
+}
+
+.c-photo-stack__src {
+    box-shadow: 0 2px 4px rgba(#000, 0.15);
+    border: 8px solid #FFF;
+    max-width: 100%;
+}

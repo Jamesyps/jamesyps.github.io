@@ -1,0 +1,54 @@
+//
+// Box Sizing
+// Credit: css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+//
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    @include set-font('sans-serif');
+    @include set-font-size(18);
+    @include set-font-leading(32);
+
+    color: get-tint('coal', 25%);
+}
+
+
+@at-root ::selection {
+    background: get-colour('amber');
+    color: #000;
+}
+
+// Highlighting
+.highlighter-rouge {
+    .highlight {
+        @include set-font-size(14);
+        @include set-font-leading(28);
+
+        border-radius: 4px;
+        padding: 15px 20px;
+
+        overflow: auto;
+    }
+}
+
+[data-scroll] {
+    transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.is-hidden {
+    transform: translateY(-50px) scale(0.8);
+    opacity: 0.1;
+}
+
+.is-visible {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+}

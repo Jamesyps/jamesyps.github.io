@@ -1,0 +1,4 @@
+.u-small {
+    @include set-font-size(16);
+    @include set-font-leading(30);
+}

@@ -1,0 +1,61 @@
+{% capture projects %}{{ page.collection }}{% endcapture %}
+
+{% if page.collection %}
+  {% assign document = site[projects] %}
+{% endif %}
+
+{% for links in document %}
+  {% if links.title == page.title %}
+    {% unless forloop.first %}
+      {% assign prevurl = prev.url %}
+      {% assign prevtitle = prev.title %}
+    {% endunless %}
+    {% unless forloop.last %}
+      {% assign next = document[forloop.index] %}
+      {% assign nexttitle = next.title %}
+      {% assign nexturl = next.url %}
+    {% endunless %}
+  {% endif %}
+  {% assign prev = links %}
+{% endfor %}
+
+{% if prevurl or nexturl or page.website %}
+
+    <div class="c-action-bar">
+        <div class="o-container">
+
+            <div class="c-action-bar__slot c-action-bar__slot--first">
+                {% if prevurl %}
+                <a href="{{ prevurl }}" class="c-link-pager c-link-pager--back">
+                    <span class="c-link-pager__label">{{ prevtitle }}</span>
+                </a>
+                {% endif %}
+            </div>
+
+            {% if page.website %}
+            <div class="c-action-bar__slot">
+                <a href="{{ page.website }}" class="c-btn c-btn--wireframe" target="_blank">
+                    Visit the website
+                </a>
+            </div>
+            {% endif %}
+
+            <div class="c-action-bar__slot c-action-bar__slot--last">
+                {% if nexturl %}
+                <a href="{{ nexturl }}" class="c-link-pager c-link-pager--next">
+                    <span class="c-link-pager__label">{{ nexttitle }}</span>
+                </a>
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        document.body.onkeyup = function(e){
+            if (e.keyCode == '37') { window.location = '{{ prevurl }}'; } // left arrow key
+            if (e.keyCode == '39') { window.location = '{{ nexturl }}'; } // right arrow key
+        };
+    </script>
+
+{% endif %}
