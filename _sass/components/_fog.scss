@@ -20,3 +20,9 @@
         }
     }
 }
+
+@include set-breakpoint-until('sm') {
+    .c-fog__bank {
+        padding: 80px 0;
+    }
+}

@@ -5,3 +5,9 @@
 .c-section--alt {
     background-color: get-tint('coal', 98%);
 }
+
+@include set-breakpoint-until('sm') {
+    .c-section {
+        padding: 40px 0;
+    }
+}
