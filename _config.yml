@@ -29,7 +29,7 @@ accounts:
   github: jamesyps
 
 paths:
-  base: https://jameswigger.co.uk
+  base: http://jameswigger.co.uk
 
 # Collections
 collections:
