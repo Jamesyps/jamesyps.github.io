@@ -145,5 +145,6 @@
     .highlight {
         margin-bottom: 30px;
         box-shadow: inset $card-shadow;
+        -webkit-overflow-scrolling: touch;
     }
 }
