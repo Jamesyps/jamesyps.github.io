@@ -11,7 +11,12 @@
 
 .c-action-bar__slot {
     flex: 1;
+    line-height: 0;
     text-align: center;
+
+    > * {
+        line-height: 0;
+    }
 }
 
 .c-action-bar__slot--first {
