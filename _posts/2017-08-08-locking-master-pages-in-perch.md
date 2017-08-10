@@ -4,6 +4,9 @@ title: Locking Master Pages in Perch
 date: '2017-08-08 20:50:00'
 intro: Its built into Runway, but how can you prevent users selecting system master pages in standard Perch?
 highlight: emerald
+
+meta:
+  description: Its built into Runway, but how can you prevent users selecting system master pages in standard Perch?
 ---
 
 When building sites using Perch I like to make sure each page is its own master template. This not only makes any future Runway upgrade easier but it feels like a better way of organising pages. Of course if you do not use master templates in this way or have a better solution do let me know!

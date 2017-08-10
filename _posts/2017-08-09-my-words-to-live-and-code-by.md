@@ -4,6 +4,8 @@ title: My Words to Live and Code By
 date: '2017-08-09 20:50:00'
 intro: Sometimes its important to sit down and take stock of where you are. Here are some of the guiding principles I try to follow in my working life.
 highlight: neon
+meta:
+  description: Sometimes its important to sit down and take stock of where you are. Here are some of the guiding principles I try to follow in my working life.
 ---
 
 A great part of my identity is that of a developer - someone who builds things. Its not constructing bridges or programming the next Linux Kernel but that does not matter to me. I sit in a studio, write code and build things for people who need them. I solve problems and make lives easier.

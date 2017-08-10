@@ -4,6 +4,10 @@ title: The Red Finch Event Logger
 date: '2017-06-05 12:15:00'
 intro: It's a nice experience to evolve your own software. Lets explore the design decisions behind the rebuild of the Perch Event Log application.
 highlight: candy
+
+
+meta:
+  description: It's a nice experience to evolve your own software. Lets explore the design decisions behind the rebuild of the Perch Event Log application.
 ---
 
 With the recent release of Perch 3 I wanted to take some time to update one of my more popular open source packages to take advantage of the new APIs and UI. 

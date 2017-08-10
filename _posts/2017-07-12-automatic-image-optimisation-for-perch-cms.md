@@ -2,8 +2,11 @@
 layout: post
 title: Automatic Image Optimisation for Perch CMS
 date: '2017-06-05 12:15:00'
-intro: Once a site is launched how do you keep it rankly highly for speed? It's not always easy once you're no longer in control of the content.
+intro: Once a site is launched how do you keep it ranking highly for speed? It's not always easy once you're no longer in control of the content.
 highlight: amber
+
+meta:
+  description: Once a site is launched how do you keep it ranking highly for speed? It's not always easy once you're no longer in control of the content.
 ---
 
 Once the keys have been handed over to a client it can difficult to ensure that uploaded content is as optimised as possible. As a developer there are a myriad of tools at your disposal to compress images, stylesheets and other static assets but these aren't easy to integrate into a client's workflow.
