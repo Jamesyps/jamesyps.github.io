@@ -12,5 +12,5 @@ footer:
   - label: LinkedIn
     href: https://www.linkedin.com/in/james-wigger-9a875923/
     tab: true
-  #- label: Curriculum Vitae
-  #  href: /assets/resources/cv.pdf
+  - label: Curriculum Vitae
+    href: /assets/resources/cv-2017.pdf
