@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 **Ok, so its clear if you look at the dates of my posts in here that I am bad at writing to regular schedule. I'm also clearly dropping off social media and going dark all across the web - and you'd be right. But I have really good reasons, I swear.**
 
@@ -31,9 +31,3 @@ Instead I am going to make use of my Kindle which has unfortunately been collect
 Oh - and the small job of buying a house, in the midst of Brexit. How hard can it be?
 
 In all seriousness, its time to stop being angry, bitter and self-destructive. So let's get on it, like a car bonnet.
-
-
-
-
-
-
