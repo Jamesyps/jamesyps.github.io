@@ -1,5 +1,18 @@
 ---
 published: true
+layout: post
+title: 'Hello, Again'
+date: '2019-01-05 22:00:00'
+intro: >-
+  The last year has been quite the series of events, with little time for
+  publishing. But, dear reader, I am back and will not so quickly abandon you
+  this time.
+highlight: coal
+meta:
+  description: >-
+    Between evictions, the beast from the east and moving to a new city there
+    has been little time for writing. But 2019 starts anew, and with new series
+    of goals to reach.
 ---
 **Ok, so its clear if you look at the dates of my posts in here that I am bad at writing to regular schedule. I'm also clearly dropping off social media and going dark all across the web - and you'd be right. But I have really good reasons, I swear.**
 
